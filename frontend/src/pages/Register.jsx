@@ -1,5 +1,7 @@
 import React from "react";
 import { FaUser } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [formData, setFormData] = React.useState({
@@ -10,6 +12,9 @@ const Register = () => {
   });
 
   const { name, email, password, password2 } = formData;
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const onChange = (e) => {
     setFormData((prevState) => ({
