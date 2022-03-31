@@ -15,6 +15,6 @@ app.use("/api/users", require("./routes/userRoutes"));
 
 app.use(errorHandler);
 
-app.listen(8080, function () {
+app.listen(5000, function () {
   console.log("listening on port 8080");
 });
